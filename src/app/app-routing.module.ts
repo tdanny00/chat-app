@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/login/login.module').then((m) => m.LoginModule),
   },
+  {
+    path: 'chat',
+    loadChildren: () =>
+      import('./components/chat/chat.module').then((m) => m.ChatModule),
+  },
   { path: '**', redirectTo: 'login' },
 ];
 
